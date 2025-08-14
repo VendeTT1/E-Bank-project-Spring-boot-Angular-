@@ -12,5 +12,5 @@ public class CurrentBankAccountDTO extends BankAccountDTO {
     private Date createDate;
     private AccountStatus status;
     private CustomerDTO customerDTO;
-    private double overdraft;
+    private double overDraft;
 }
