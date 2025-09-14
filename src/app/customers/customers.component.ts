@@ -3,12 +3,18 @@ import {HttpClient} from "@angular/common/http";
 import {CustomerService} from "../services/customer.service";
 import {catchError, map, Observable, throwError} from "rxjs";
 ;
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Router} from "@angular/router";
-import {Customer} from './model/customer.model';
+import {Customer} from '../model/customer.model';
+import {AsyncPipe, CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-customers',
+  imports: [
+    ReactiveFormsModule,
+    AsyncPipe,
+    CommonModule
+  ],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
